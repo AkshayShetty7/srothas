@@ -4,7 +4,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Srothas Ayurveda – Room Management",
-  description: "Internal room management system for Srothas Ayurveda Panchakarma Healthcare",
+  description:
+    "Internal room management system for Srothas Ayurveda Panchakarma Healthcare",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -15,13 +22,39 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          sizes="any"
+        />
+
+        <link
+          rel="shortcut icon"
+          href="/favicon.ico"
+        />
+
+        <link
+          rel="apple-touch-icon"
+          href="/favicon.ico"
+        />
+
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap"
           rel="stylesheet"
         />
       </head>
+
       <body className="font-sans antialiased bg-gray-50 text-gray-900">
         <Toaster
           position="top-right"
@@ -35,14 +68,23 @@ export default function RootLayout({
               fontSize: "14px",
               fontFamily: "'DM Sans', sans-serif",
             },
+
             success: {
-              iconTheme: { primary: "#3d6b3a", secondary: "#fff" },
+              iconTheme: {
+                primary: "#3d6b3a",
+                secondary: "#fff",
+              },
             },
+
             error: {
-              iconTheme: { primary: "#ef4444", secondary: "#fff" },
+              iconTheme: {
+                primary: "#ef4444",
+                secondary: "#fff",
+              },
             },
           }}
         />
+
         {children}
       </body>
     </html>
