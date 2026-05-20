@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #3d6b3a;
+  --brand-light: #4a8548;
+  --brand-dark: #2d5228;
+  --brand-bg: #f0f7ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f8fa;
+}
+
+/* FullCalendar Custom Overrides */
+.fc {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #1a1a1a;
+}
+
+.fc .fc-button {
+  background: #fff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #374151 !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 6px 14px !important;
+  box-shadow: none !important;
+  transition: all 0.15s !important;
+}
+
+.fc .fc-button:hover {
+  background: #f3f4f6 !important;
+  border-color: #d1d5db !important;
+}
+
+.fc .fc-button-primary:not(.fc-button-active):not(:disabled):hover {
+  background: #f3f4f6 !important;
+}
+
+.fc .fc-button-active {
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+  color: #fff !important;
+}
+
+.fc .fc-daygrid-day-number {
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  padding: 6px 8px !important;
+}
+
+.fc .fc-col-header-cell-cushion {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #9ca3af !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background: #f0f7ee !important;
+}
+
+.fc .fc-day-today .fc-daygrid-day-number {
+  background: var(--brand) !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  width: 26px !important;
+  height: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 4px !important;
+}
+
+.fc-event {
+  border: none !important;
+  background: var(--brand) !important;
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+}
+
+.fc-event:hover {
+  background: var(--brand-light) !important;
+}
+
+.fc .fc-scrollgrid {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border-color: #e5e7eb !important;
+}
+
+.fc .fc-scrollgrid-section-header th,
+.fc .fc-scrollgrid-section-body td,
+.fc .fc-scrollgrid-section-footer td {
+  border-color: #e5e7eb !important;
+}
+
+.fc .fc-toolbar {
+  padding: 0 0 16px 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
