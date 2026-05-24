@@ -7,10 +7,15 @@ export const metadata: Metadata = {
   description:
     "Internal room management system for Srothas Ayurveda Panchakarma Healthcare",
 
+  manifest: "/manifest.json",
+
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/icon-192.png",
   },
 };
 
@@ -22,22 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="icon"
-          href="/favicon.ico"
-          sizes="any"
-        />
-
-        <link
-          rel="shortcut icon"
-          href="/favicon.ico"
-        />
-
-        <link
-          rel="apple-touch-icon"
-          href="/favicon.ico"
-        />
-
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
@@ -68,14 +57,12 @@ export default function RootLayout({
               fontSize: "14px",
               fontFamily: "'DM Sans', sans-serif",
             },
-
             success: {
               iconTheme: {
                 primary: "#3d6b3a",
                 secondary: "#fff",
               },
             },
-
             error: {
               iconTheme: {
                 primary: "#ef4444",
